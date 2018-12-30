@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
 
+// semantic components
 import { Container, Button } from 'semantic-ui-react';
+import { FormattedMessage } from "react-intl";
+
+import { translationConstants as messages } from './app/constants/index';
 
 class App extends Component {
   render() {
+    
     return (
-      <Container>
+      
+      <Container fluid>
         <Button primary>
-          Start The App
+          <FormattedMessage
+            id={messages.HELLO}
+            defaultMessage={'Hello !'}
+          />
         </Button>
       </Container>
+    
     );
   }
 }
