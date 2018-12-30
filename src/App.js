@@ -1,27 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-// semantic components
-import { Container, Button } from 'semantic-ui-react';
-import { FormattedMessage } from "react-intl";
+import Application from "./app/Application";
 
-import { translationConstants as messages } from './app/constants/index';
-
-class App extends Component {
-  render() {
-    
-    return (
-      
-      <Container fluid>
-        <Button primary>
-          <FormattedMessage
-            id={messages.HELLO}
-            defaultMessage={'Hello !'}
-          />
-        </Button>
-      </Container>
-    
-    );
-  }
-}
-
-export default App;
+export default () => <Application/>;

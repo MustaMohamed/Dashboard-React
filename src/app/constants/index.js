@@ -1,3 +1,3 @@
-import translationConstants from './translation_constants/en.constants';
+import translationConstants from './translation_constants/language.constants';
 
 export { translationConstants };

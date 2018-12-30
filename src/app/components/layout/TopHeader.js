@@ -5,8 +5,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-
-class Layout extends Component {
+class TopHeader extends Component {
   
   constructor(props) {
     super (props);
@@ -22,6 +21,6 @@ class Layout extends Component {
   }
 }
 
-Layout.propTypes = {};
+TopHeader.propTypes = {};
 
-export default Layout;
+export default TopHeader;
