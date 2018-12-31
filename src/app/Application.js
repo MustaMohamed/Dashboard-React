@@ -7,20 +7,20 @@ import React, { Component } from 'react';
 
 // semantic css package
 import 'semantic-ui-css/semantic.min.css';
-// semantic ui components
-// import { Button, Container } from "semantic-ui-react";
-
+// custom style
+import './content/styles/common/style.css';
 
 // Intl provider for I18n
-import {  IntlProvider } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 
 // english translation json
 import en from './constants/translations_files/en.json';
 
-// translation messages keys
-// import { translationConstants as messages } from "./constants";
+// translation localization keys
+// import { translationConstants as localization } from "./constants";
 
 import Layout from "./components/layout/Layout";
+import { Container } from "semantic-ui-react";
 
 // get current language
 const lang = window.navigator.language.split (/[-_]/)[0];
@@ -40,20 +40,21 @@ class Application extends Component {
     return (
       <IntlProvider locale={lang} messages={localization[lang]}>
         <Layout>
-          <h1>Hello!</h1>
-          <h1>Hello!</h1>
-          <h1>Hello!</h1>
-          <h1>Hello!</h1>
-          <h1>Hello!</h1>
-          <h1>Hello!</h1>
-          <h1>Hello!</h1>
-      
-          <h1>Hello!</h1>
-          <h1>Hello!</h1>
-          <h1>Hello!</h1>
-          <h1>Hello!</h1>
-          <h1>Hello!</h1>
-
+          <Container fluid>
+            <h1>Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!</h1>
+            <h1>Hello!</h1>
+            <h1>Hello!</h1>
+            <h1>Hello!</h1>
+            <h1>Hello!</h1>
+            <h1>Hello!</h1>
+            <h1>Hello!</h1>
+            
+            <h1>Hello!</h1>
+            <h1>Hello!</h1>
+            <h1>Hello!</h1>
+            <h1>Hello!</h1>
+            <h1>Hello!</h1>
+          </Container>
         </Layout>
       </IntlProvider>
     );
