@@ -3,12 +3,12 @@
  */
 
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import AppSidebar from "./AppSidebar";
 import TopHeader from "./TopHeader";
 
 // component css styles
-import '../../content/styles/layout/style.css';
+import '../../content/styles/layout.css';
+import { Container } from "semantic-ui-react";
 
 
 class Layout extends Component {
@@ -37,7 +37,6 @@ class Layout extends Component {
   }
 }
 
-Layout.propTypes = {
-};
+Layout.propTypes = {};
 
 export default Layout;

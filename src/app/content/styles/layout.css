@@ -46,10 +46,19 @@
     width: 100%;
 }
 
-.top-menu-small .ui.vertical.menu .right.menu .item {
+.top-menu-small .ui.vertical.menu .item ,
+.top-menu-small .ui.vertical.menu .menu.right {
     display: inline-block;
 }
 
 .sidebar-trigger {
     float: left !important;
+}
+
+/* media query */
+
+@media (min-width: 992px) {
+    #page-content {
+        width: calc(100% - 260px);
+    }
 }

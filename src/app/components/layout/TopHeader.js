@@ -28,14 +28,9 @@ class TopHeader extends Component {
   
   handleSidebarHide = () => {
     this.props.onSidebarVisibleUpdate ();
-    console.log ('Click Event !');
   };
   
   handleSidebarUpdate = (e, { width }) => {
-    
-    console.log (width, Responsive.onlyTablet.minWidth);
-    
-    console.log ('Update Event !');
     
     // update top menu
     if(width >= Responsive.onlyTablet.minWidth) {

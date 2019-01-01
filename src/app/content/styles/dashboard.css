@@ -1,0 +1,32 @@
+.dashboard-hero {
+    width: 100% !important;
+    margin: 10px !important;
+}
+
+.dashboard-hero-title {
+    font-size: 3em !important;
+    text-transform: uppercase !important;
+    color: #40739e !important;
+}
+
+.dashboard-hero-text {
+    line-height: 2em !important;
+    font-weight: 300 !important;
+    color: #616161 !important;
+    margin-top: 0 !important;
+}
+
+.dashboard-hero-text q,
+.dashboard-hero-text footer {
+    color: #afa4a5;
+    font-style: italic;
+}
+
+.dashboard-hero-text footer {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.dashboard-hero-text footer:before {
+    content: '- ';
+}

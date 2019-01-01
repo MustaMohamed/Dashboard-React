@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 // semantic css package
 import 'semantic-ui-css/semantic.min.css';
 // custom style
-import './content/styles/common/style.css';
+import './content/styles/common.css';
 
 // Intl provider for I18n
 import { IntlProvider } from 'react-intl';
@@ -20,7 +20,8 @@ import en from './constants/translations_files/en.json';
 // import { translationConstants as localization } from "./constants";
 
 import Layout from "./components/layout/Layout";
-import { Container } from "semantic-ui-react";
+import { Container, Grid } from "semantic-ui-react";
+import Dashboard from "./components/pages/Dashboard";
 
 // get current language
 const lang = window.navigator.language.split (/[-_]/)[0];
@@ -40,21 +41,7 @@ class Application extends Component {
     return (
       <IntlProvider locale={lang} messages={localization[lang]}>
         <Layout>
-          <Container fluid>
-            <h1>Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!Hello!</h1>
-            <h1>Hello!</h1>
-            <h1>Hello!</h1>
-            <h1>Hello!</h1>
-            <h1>Hello!</h1>
-            <h1>Hello!</h1>
-            <h1>Hello!</h1>
-            
-            <h1>Hello!</h1>
-            <h1>Hello!</h1>
-            <h1>Hello!</h1>
-            <h1>Hello!</h1>
-            <h1>Hello!</h1>
-          </Container>
+          <Dashboard />
         </Layout>
       </IntlProvider>
     );

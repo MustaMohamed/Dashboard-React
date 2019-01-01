@@ -1,0 +1,9 @@
+body {
+    background-color: #f5f6fa;
+    min-height: 100%;
+}
+
+#root,
+#root > div {
+    height: 100%;
+}
