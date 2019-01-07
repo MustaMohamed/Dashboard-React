@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/Dashboard-React/static/media/outline-icons.cd6c777f.woff2"
   },
   {
-    "revision": "d63945f97ee01c4952d8",
-    "url": "/Dashboard-React/static/css/main.04e84efe.chunk.css"
+    "revision": "06bbbb4d8d7a8556ba9b",
+    "url": "/Dashboard-React/static/css/main.559299ec.chunk.css"
   },
   {
     "revision": "a1a749e89f578a49306ec2b055c073da",
@@ -24,16 +24,16 @@ self.__precacheManifest = [
     "url": "/Dashboard-React/static/media/flags.9c74e172.png"
   },
   {
-    "revision": "0ab54153eeeca0ce03978cc463b257f7",
-    "url": "/Dashboard-React/static/media/icons.0ab54153.woff2"
-  },
-  {
     "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
     "url": "/Dashboard-React/static/media/icons.8e3c7f55.eot"
   },
   {
     "revision": "faff92145777a3cbaf8e7367b4807987",
     "url": "/Dashboard-React/static/media/icons.faff9214.woff"
+  },
+  {
+    "revision": "0ab54153eeeca0ce03978cc463b257f7",
+    "url": "/Dashboard-React/static/media/icons.0ab54153.woff2"
   },
   {
     "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
@@ -44,12 +44,8 @@ self.__precacheManifest = [
     "url": "/Dashboard-React/static/media/outline-icons.701ae6ab.eot"
   },
   {
-    "revision": "d63945f97ee01c4952d8",
-    "url": "/Dashboard-React/static/js/main.d63945f9.chunk.js"
-  },
-  {
-    "revision": "962a1bf31c081691065fe333d9fa8105",
-    "url": "/Dashboard-React/static/media/icons.962a1bf3.svg"
+    "revision": "06bbbb4d8d7a8556ba9b",
+    "url": "/Dashboard-React/static/js/main.06bbbb4d.chunk.js"
   },
   {
     "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
@@ -64,12 +60,16 @@ self.__precacheManifest = [
     "url": "/Dashboard-React/static/media/outline-icons.82f60bd0.svg"
   },
   {
-    "revision": "e8c322de9658cbeb8a774b6624167c2c",
-    "url": "/Dashboard-React/static/media/brand-icons.e8c322de.woff2"
+    "revision": "962a1bf31c081691065fe333d9fa8105",
+    "url": "/Dashboard-React/static/media/icons.962a1bf3.svg"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
     "url": "/Dashboard-React/static/media/brand-icons.13db00b7.eot"
+  },
+  {
+    "revision": "e8c322de9658cbeb8a774b6624167c2c",
+    "url": "/Dashboard-React/static/media/brand-icons.e8c322de.woff2"
   },
   {
     "revision": "a046592bac8f2fd96e994733faf3858c",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/Dashboard-React/static/css/1.a3f08c3d.chunk.css"
   },
   {
-    "revision": "40f69306b8f9a7becd0b79750bcf585c",
+    "revision": "00b863d1a72053538f5a5e96f3d0a6ec",
     "url": "/Dashboard-React/index.html"
   }
 ];
