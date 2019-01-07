@@ -16,11 +16,15 @@
     margin-top: 0 !important;
 }
 
-.dashboard-hero-text q,
-.dashboard-hero-text footer {
+.quote-text {
     color: #afa4a5;
+}
+.dashboard-hero-text footer.quote-text,
+.dashboard-hero-text q.quote-text {
     font-style: italic;
 }
+
+
 
 .dashboard-hero-text footer {
     display: inline-block;
@@ -29,4 +33,12 @@
 
 .dashboard-hero-text footer:before {
     content: '- ';
+}
+
+.ui.top.attached.label:first-child+:not(.attached) {
+    margin-top: 0!important;
+}
+
+.task-container {
+    margin: 20px 5px;
 }

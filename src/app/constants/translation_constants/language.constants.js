@@ -14,5 +14,10 @@ export default {
   DASHBOARD_HERO_VIEW_TIPS: 'hero_view_tips',
   ANNOUNCEMENT_TITLE: 'announcement_title',
   ANNOUNCEMENT_DESCRIPTION: 'announcement_description',
-  
+  ALL: "all",
+  TASKS_TITLE: "tasks_title",
+  TASKS_DESCRIPTION: "tasks_description",
+  COURSE: "course",
+  TOPIC: "topic",
+  DUE_TO: "due_to"
 }
