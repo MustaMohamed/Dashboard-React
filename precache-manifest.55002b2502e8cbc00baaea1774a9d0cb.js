@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/Dashboard-React/static/media/outline-icons.cd6c777f.woff2"
   },
   {
-    "revision": "240550a07c8291bad9bf",
-    "url": "/Dashboard-React/static/css/main.9469c7db.chunk.css"
+    "revision": "d63945f97ee01c4952d8",
+    "url": "/Dashboard-React/static/css/main.04e84efe.chunk.css"
   },
   {
     "revision": "a1a749e89f578a49306ec2b055c073da",
@@ -44,8 +44,12 @@ self.__precacheManifest = [
     "url": "/Dashboard-React/static/media/outline-icons.701ae6ab.eot"
   },
   {
-    "revision": "240550a07c8291bad9bf",
-    "url": "/Dashboard-React/static/js/main.240550a0.chunk.js"
+    "revision": "d63945f97ee01c4952d8",
+    "url": "/Dashboard-React/static/js/main.d63945f9.chunk.js"
+  },
+  {
+    "revision": "962a1bf31c081691065fe333d9fa8105",
+    "url": "/Dashboard-React/static/media/icons.962a1bf3.svg"
   },
   {
     "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
@@ -56,20 +60,16 @@ self.__precacheManifest = [
     "url": "/Dashboard-React/static/media/outline-icons.ad97afd3.ttf"
   },
   {
-    "revision": "962a1bf31c081691065fe333d9fa8105",
-    "url": "/Dashboard-React/static/media/icons.962a1bf3.svg"
-  },
-  {
     "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
     "url": "/Dashboard-React/static/media/outline-icons.82f60bd0.svg"
   },
   {
-    "revision": "13db00b7a34fee4d819ab7f9838cc428",
-    "url": "/Dashboard-React/static/media/brand-icons.13db00b7.eot"
-  },
-  {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
     "url": "/Dashboard-React/static/media/brand-icons.e8c322de.woff2"
+  },
+  {
+    "revision": "13db00b7a34fee4d819ab7f9838cc428",
+    "url": "/Dashboard-React/static/media/brand-icons.13db00b7.eot"
   },
   {
     "revision": "a046592bac8f2fd96e994733faf3858c",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/Dashboard-React/static/css/1.a3f08c3d.chunk.css"
   },
   {
-    "revision": "48f83b0e38d90144b5236eeb9742c149",
+    "revision": "40f69306b8f9a7becd0b79750bcf585c",
     "url": "/Dashboard-React/index.html"
   }
 ];
