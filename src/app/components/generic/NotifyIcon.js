@@ -18,11 +18,11 @@ const NotifyIcon = props => {
         `}
       </style>
       <Icon id={'notify-icon'}
-        circular={props.iconCircular}
-        name={props.iconName}
-        link={props.iconAsLink}
-        size={props.iconSize}
-        color={props.iconColor}>
+            circular={props.iconCircular}
+            name={props.iconName}
+            link={props.iconAsLink}
+            size={props.iconSize}
+            color={props.iconColor}>
         {props.labeled && <Label color={props.labelColor}
                                  size={props.labelSize}
                                  floating={props.labelFloat}

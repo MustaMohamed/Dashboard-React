@@ -8,7 +8,6 @@ import TopHeader from "./TopHeader";
 
 // component css styles
 import '../../content/styles/layout.css';
-import { Container } from "semantic-ui-react";
 
 
 class Layout extends Component {

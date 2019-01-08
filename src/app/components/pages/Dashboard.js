@@ -3,21 +3,28 @@
  */
 
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Button, Card, Container, Grid, Header, Icon, Label, Segment } from "semantic-ui-react";
+import { Button, Container, Grid, Header,  Label, Segment } from "semantic-ui-react";
 
 import '../../content/styles/dashboard.css';
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, intlShape, injectIntl } from "react-intl";
 
 import { translationConstants as localization } from '../../constants/index';
 import Assignment from "../generic/Assignment";
+import NewsFeed from "../generic/NewsFeed";
 
 class Dashboard extends Component {
   
   constructor(props) {
     super (props);
-    this.state = {};
+    this.state = {
+      newsFeed: {
+        user: { userName: 'Mustafa Mohamed' },
+        feedDate: (new Date ()).toDateString (),
+        feedText: (this.props.intl.formatMessage ({id: localization.DASHBOARD_HERO_TEXT}))
+      }
+    };
   }
+
   
   // todo: add background image
   render() {
@@ -75,8 +82,13 @@ class Dashboard extends Component {
                                 defualtMessage={`What's due`}/>
             
             </p>
-          
-          
+            <Grid padded>
+              <NewsFeed {...this.state.newsFeed} />
+              <NewsFeed {...this.state.newsFeed} />
+              <NewsFeed {...this.state.newsFeed} />
+              <NewsFeed {...this.state.newsFeed} />
+              <NewsFeed {...this.state.newsFeed} />
+            </Grid>
           </Segment>
         </Grid.Column>
         
@@ -100,11 +112,11 @@ class Dashboard extends Component {
             </p>
             
             
-            <Assignment className={'task-container'}  title={'Unit 2 quiz'}
+            <Assignment className={'task-container'} title={'Unit 2 quiz'}
                         titleIcon={{ name: 'hourglass half', color: 'teal' }}
                         relatedTo={'Physics 02'}
                         topic={'Unit2, Motion and forces'}
-                        due={(new Date ()).toDateString()}
+                        due={(new Date ()).toDateString ()}
                         action={<Button basic color={'teal'} fluid content={'Start Quiz'}/>}
             />
             
@@ -112,7 +124,7 @@ class Dashboard extends Component {
                         titleIcon={{ name: 'clipboard check', color: 'teal' }}
                         relatedTo={'Physics 02'}
                         topic={'Unit2, Motion and forces'}
-                        due={(new Date ()).toDateString()}
+                        due={(new Date ()).toDateString ()}
                         action={<Button basic color={'teal'} fluid content={'Start Assignment'}/>}
             />
           
@@ -123,6 +135,8 @@ class Dashboard extends Component {
   }
 }
 
-Dashboard.propTypes = {};
+Dashboard.propTypes = {
+  intl: intlShape.isRequired
+};
 
-export default Dashboard;
+export default injectIntl(Dashboard);

@@ -61,4 +61,10 @@
     #page-content {
         width: calc(100% - 260px);
     }
+
+}
+@media (max-width: 992px) {
+    .top-menu {
+        margin-bottom: 20px;
+    }
 }

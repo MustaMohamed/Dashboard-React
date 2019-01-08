@@ -42,3 +42,17 @@
 .task-container {
     margin: 20px 5px;
 }
+
+
+.assignment-container:not(:last-child) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid teal;
+}
+
+.user-profile  {
+    border-right: 1px solid #afa4a5;
+}
+
+.user-profile .header {
+    margin: 0;
+}

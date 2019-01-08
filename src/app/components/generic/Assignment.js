@@ -2,7 +2,7 @@
  * Created by @musta in 30/12/18
  */
 
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Header, Icon } from "semantic-ui-react";
 import { FormattedMessage } from "react-intl";
@@ -10,18 +10,10 @@ import { FormattedMessage } from "react-intl";
 import { translationConstants as localization } from '../../constants/index';
 
 
-class Assignment extends Component {
-  
-  constructor(props) {
-    super (props);
-    this.state = {};
-  }
-  
-  render() {
-    const props = { ...this.props };
-    const { titleIcon } = this.props;
+const Assignment = props => {
+    const { titleIcon } = props;
     return (
-      <div className={props.className}>
+      <div className={[props.className, 'assignment-container'].join(' ')}>
         <Header>
           {titleIcon && titleIcon.name && <Icon name={titleIcon.name}
                                                 color={titleIcon.color}
@@ -41,7 +33,6 @@ class Assignment extends Component {
         </div>
       </div>
     );
-  }
 }
 
 Assignment.propTypes = {

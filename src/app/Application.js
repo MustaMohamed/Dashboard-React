@@ -20,7 +20,6 @@ import en from './constants/translations_files/en.json';
 // import { translationConstants as localization } from "./constants";
 
 import Layout from "./components/layout/Layout";
-import { Container, Grid } from "semantic-ui-react";
 import Dashboard from "./components/pages/Dashboard";
 
 // get current language
