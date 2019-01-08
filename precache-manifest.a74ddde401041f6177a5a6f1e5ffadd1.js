@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/Dashboard-React/static/media/outline-icons.cd6c777f.woff2"
   },
   {
-    "revision": "06bbbb4d8d7a8556ba9b",
-    "url": "/Dashboard-React/static/css/main.559299ec.chunk.css"
+    "revision": "3e10e0456bbd3b677468",
+    "url": "/Dashboard-React/static/css/main.be02fc99.chunk.css"
   },
   {
     "revision": "a1a749e89f578a49306ec2b055c073da",
     "url": "/Dashboard-React/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "44226fd4f6a9aa64a5af",
-    "url": "/Dashboard-React/static/js/1.44226fd4.chunk.js"
+    "revision": "a8d1e16702c90ef69c77",
+    "url": "/Dashboard-React/static/js/1.a8d1e167.chunk.js"
   },
   {
     "revision": "c10322ba5e6de36e2537",
@@ -28,12 +28,12 @@ self.__precacheManifest = [
     "url": "/Dashboard-React/static/media/icons.8e3c7f55.eot"
   },
   {
-    "revision": "faff92145777a3cbaf8e7367b4807987",
-    "url": "/Dashboard-React/static/media/icons.faff9214.woff"
-  },
-  {
     "revision": "0ab54153eeeca0ce03978cc463b257f7",
     "url": "/Dashboard-React/static/media/icons.0ab54153.woff2"
+  },
+  {
+    "revision": "faff92145777a3cbaf8e7367b4807987",
+    "url": "/Dashboard-React/static/media/icons.faff9214.woff"
   },
   {
     "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/Dashboard-React/static/media/outline-icons.701ae6ab.eot"
   },
   {
-    "revision": "06bbbb4d8d7a8556ba9b",
-    "url": "/Dashboard-React/static/js/main.06bbbb4d.chunk.js"
+    "revision": "3e10e0456bbd3b677468",
+    "url": "/Dashboard-React/static/js/main.3e10e045.chunk.js"
   },
   {
     "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
@@ -80,11 +80,11 @@ self.__precacheManifest = [
     "url": "/Dashboard-React/static/media/brand-icons.c5ebe0b3.ttf"
   },
   {
-    "revision": "44226fd4f6a9aa64a5af",
-    "url": "/Dashboard-React/static/css/1.a3f08c3d.chunk.css"
+    "revision": "a8d1e16702c90ef69c77",
+    "url": "/Dashboard-React/static/css/1.daf39f27.chunk.css"
   },
   {
-    "revision": "00b863d1a72053538f5a5e96f3d0a6ec",
+    "revision": "a326027078f5f9c52d64ea8a3ac3dd38",
     "url": "/Dashboard-React/index.html"
   }
 ];
