@@ -13,7 +13,7 @@ import { Menu, Icon, Sidebar, Header } from 'semantic-ui-react';
 import { FormattedMessage } from "react-intl";
 
 // translation constants keys
-import { translationConstants as localization } from '../../constants/index';
+import { translationConstants as localization } from '../../constants';
 
 class AppSidebar extends Component {
   

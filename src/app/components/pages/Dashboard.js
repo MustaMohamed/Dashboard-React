@@ -8,11 +8,16 @@ import { Button, Container, Grid, Header, Label, Segment } from "semantic-ui-rea
 import '../../content/styles/dashboard.css';
 import { FormattedMessage, intlShape, injectIntl } from "react-intl";
 
-import { translationConstants as localization } from '../../constants/index';
+import { translationConstants as localization } from '../../constants';
 import Assignment from "../generic/Assignment";
 import Announcement from "../generic/Announcement";
-import FakeAnnouncementService from "../../services/fakeAnnouncement.service";
-import FakeQuizzesService from "../../services/fakeQuizzes.service";
+
+
+import { FakeAnnouncementService, FakeQuizzesService } from "../../services";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+
+import { AppActions, AnnouncementsActions, QuizzesActions } from "../../actions";
 
 class Dashboard extends Component {
   
@@ -24,24 +29,47 @@ class Dashboard extends Component {
     };
   }
   
+  timeOuts = [];
   
-  componentDidMount() {
-    this.setState ({
-      announcements: FakeAnnouncementService.getLatestAnnouncements (),
-      quizzes: FakeQuizzesService.getLatestQuizzes ()
-    });
+  componentWillUnmount() {
+    this.timeOuts.map (item => clearTimeout (item));
   }
   
+  componentDidMount() {
+    this.timeOuts.push (setTimeout (() => {
+      
+      this.props.dispatch (AppActions.HideLoading ());
+      this.setState ({
+        announcements: FakeAnnouncementService.getLatestAnnouncements (),
+        quizzes: FakeQuizzesService.getLatestQuizzes ()
+      });
+    }, 1000));
+    
+    
+    // call fake API services the result announcement array is empty
+    this.props.dispatch (AnnouncementsActions.getLatestAnnouncements ());
+    
+    // call fake API services the result quizzes array is empty
+    this.props.dispatch (QuizzesActions.getLatestQuizzes ());
+  }
   
   getAllAnnouncements = () => {
-    this.setState ({
-      announcements: FakeAnnouncementService.getAllAnnouncements ()
-    });
+    this.timeOuts.push (setTimeout (() => {
+      this.props.dispatch (AppActions.HideLoading ());
+      this.setState ({
+        announcements: FakeAnnouncementService.getAllAnnouncements (),
+      });
+    }, 1000));
+    this.props.dispatch (AppActions.ShowLoading ());
   };
   getAllQuizzes = () => {
-    this.setState ({
-      quizzes: FakeQuizzesService.getAllQuizzes()
-    });
+    this.timeOuts.push (setTimeout (() => {
+      this.props.dispatch (AppActions.HideLoading ());
+      this.setState ({
+        quizzes: FakeQuizzesService.getAllQuizzes ()
+      });
+    }, 1000));
+    this.props.dispatch (AppActions.ShowLoading ());
   };
   
   // todo: add background image
@@ -103,7 +131,7 @@ class Dashboard extends Component {
             <Grid padded>
               
               {this.state.announcements.map ((item, idx) => <Announcement key={idx} {...item}/>)}
-              
+            
             </Grid>
           </Segment>
         </Grid.Column>
@@ -141,7 +169,23 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
-  intl: intlShape.isRequired
+  intl: intlShape.isRequired,
+  dispatch: PropTypes.func.isRequired,
+  showLoading: PropTypes.bool,
+  announcements: PropTypes.array,
+  quizzes: PropTypes.array
 };
 
-export default injectIntl (Dashboard);
+const mapStateToProps = (state) => {
+  const { showLoading } = state.app;
+  const { announcements } = state.announcements;
+  const { quizzes } = state.quizzes;
+  return {
+    showLoading,
+    announcements,
+    quizzes
+  };
+};
+
+
+export default connect (mapStateToProps) (injectIntl (Dashboard));

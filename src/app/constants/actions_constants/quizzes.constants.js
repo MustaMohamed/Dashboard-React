@@ -1,0 +1,4 @@
+export default {
+  GET_ALL_QUIZZES : 'GET_ALL_QUIZZES',
+  GET_LATEST_QUIZZES : 'GET_LATEST_QUIZZES',
+};
