@@ -17,7 +17,7 @@ const UserProfile = props => {
       <Header size={'tiny'}>
         {props.user.userName}
       </Header>
-      <p className={'quote-text'}>{props.feedDate}</p>
+      <p className={'quote-text'}>{props.announceDate}</p>
     </div>
   );
 };
@@ -30,7 +30,7 @@ UserProfile.propTypes = {
       PropTypes.object
     ])
   }),
-  feedDate: PropTypes.oneOfType ([
+  announceDate: PropTypes.oneOfType ([
     PropTypes.string,
     PropTypes.object
   ])

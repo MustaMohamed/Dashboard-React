@@ -7,21 +7,21 @@ import PropTypes from 'prop-types';
 import { Grid } from "semantic-ui-react";
 import UserProfile from "./UserProfile";
 
-const NewsFeed = props => {
+const Announcement = props => {
   return (
     <Grid.Row>
       <Grid.Column width={5}>
-        <UserProfile feedDate={props.feedDate} user={props.user}/>
+        <UserProfile announceDate={props.announceDate} user={props.user}/>
       
       </Grid.Column>
       <Grid.Column width={11}>
-        <p className={'quote-text'}>{props.feedText}</p>
+        <p className={'quote-text'}>{props.announceText}</p>
       </Grid.Column>
     </Grid.Row>
   );
 };
 
-NewsFeed.propTypes = {
+Announcement.propTypes = {
   user: PropTypes.shape({
     userName: PropTypes.string,
     userImage: PropTypes.oneOfType([
@@ -29,12 +29,12 @@ NewsFeed.propTypes = {
       PropTypes.object
     ])
   }),
-  feedDate: PropTypes.oneOfType([
+  announceDate: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object
   ]),
-  feedText: PropTypes.string
+  announceText: PropTypes.string
 };
 
 
-export default NewsFeed;
+export default Announcement;

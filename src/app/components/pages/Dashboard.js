@@ -3,28 +3,46 @@
  */
 
 import React, { Component } from 'react';
-import { Button, Container, Grid, Header,  Label, Segment } from "semantic-ui-react";
+import { Button, Container, Grid, Header, Label, Segment } from "semantic-ui-react";
 
 import '../../content/styles/dashboard.css';
 import { FormattedMessage, intlShape, injectIntl } from "react-intl";
 
 import { translationConstants as localization } from '../../constants/index';
 import Assignment from "../generic/Assignment";
-import NewsFeed from "../generic/NewsFeed";
+import Announcement from "../generic/Announcement";
+import FakeAnnouncementService from "../../services/fakeAnnouncement.service";
+import FakeQuizzesService from "../../services/fakeQuizzes.service";
 
 class Dashboard extends Component {
   
   constructor(props) {
     super (props);
     this.state = {
-      newsFeed: {
-        user: { userName: 'Mustafa Mohamed' },
-        feedDate: (new Date ()).toDateString (),
-        feedText: (this.props.intl.formatMessage ({id: localization.DASHBOARD_HERO_TEXT}))
-      }
+      announcements: [],
+      quizzes: []
     };
   }
-
+  
+  
+  componentDidMount() {
+    this.setState ({
+      announcements: FakeAnnouncementService.getLatestAnnouncements (),
+      quizzes: FakeQuizzesService.getLatestQuizzes ()
+    });
+  }
+  
+  
+  getAllAnnouncements = () => {
+    this.setState ({
+      announcements: FakeAnnouncementService.getAllAnnouncements ()
+    });
+  };
+  getAllQuizzes = () => {
+    this.setState ({
+      quizzes: FakeQuizzesService.getAllQuizzes()
+    });
+  };
   
   // todo: add background image
   render() {
@@ -67,7 +85,7 @@ class Dashboard extends Component {
         </Grid.Row>
         <Grid.Column width={11}>
           <Segment>
-            <Label as={'a'} attached='top right'>
+            <Label as={'a'} attached='top right' onClick={this.getAllAnnouncements}>
               <FormattedMessage id={localization.ALL}
                                 defualtMessage={'All'}/>
             </Label>
@@ -83,18 +101,16 @@ class Dashboard extends Component {
             
             </p>
             <Grid padded>
-              <NewsFeed {...this.state.newsFeed} />
-              <NewsFeed {...this.state.newsFeed} />
-              <NewsFeed {...this.state.newsFeed} />
-              <NewsFeed {...this.state.newsFeed} />
-              <NewsFeed {...this.state.newsFeed} />
+              
+              {this.state.announcements.map ((item, idx) => <Announcement key={idx} {...item}/>)}
+              
             </Grid>
           </Segment>
         </Grid.Column>
         
         <Grid.Column width={5}>
           <Segment>
-            <Label as={'a'} attached='top right'>
+            <Label as={'a'} attached='top right' onClick={this.getAllQuizzes}>
               <FormattedMessage id={localization.ALL}
                                 defualtMessage={'All'}/>
             </Label>
@@ -111,22 +127,11 @@ class Dashboard extends Component {
             
             </p>
             
-            
-            <Assignment className={'task-container'} title={'Unit 2 quiz'}
-                        titleIcon={{ name: 'hourglass half', color: 'teal' }}
-                        relatedTo={'Physics 02'}
-                        topic={'Unit2, Motion and forces'}
-                        due={(new Date ()).toDateString ()}
-                        action={<Button basic color={'teal'} fluid content={'Start Quiz'}/>}
-            />
-            
-            <Assignment className={'alohaa'} title={'12-12 Assignment'}
-                        titleIcon={{ name: 'clipboard check', color: 'teal' }}
-                        relatedTo={'Physics 02'}
-                        topic={'Unit2, Motion and forces'}
-                        due={(new Date ()).toDateString ()}
-                        action={<Button basic color={'teal'} fluid content={'Start Assignment'}/>}
-            />
+            {this.state.quizzes.map ((item, idx) =>
+              <Assignment key={idx} {...item}
+                          titleIcon={{ name: 'hourglass half', color: 'teal' }}
+                          action={<Button basic color={'teal'} fluid content={'Start ' + item.type}/>}/>
+            )}
           
           </Segment>
         </Grid.Column>
@@ -139,4 +144,4 @@ Dashboard.propTypes = {
   intl: intlShape.isRequired
 };
 
-export default injectIntl(Dashboard);
+export default injectIntl (Dashboard);

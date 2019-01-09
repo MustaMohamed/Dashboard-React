@@ -39,10 +39,13 @@
     margin-top: 0!important;
 }
 
-.task-container {
+.assignment-container {
     margin: 20px 5px;
 }
 
+.assignment-container button {
+    text-transform: capitalize!important;
+}
 
 .assignment-container:not(:last-child) {
     padding-bottom: 20px;

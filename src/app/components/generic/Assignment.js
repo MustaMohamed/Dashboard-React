@@ -22,9 +22,9 @@ const Assignment = props => {
           <Header.Content>{props.title}</Header.Content>
         </Header>
         <div className={'quote-text'}>
-          {props.relatedTo && <p>
+          {props.relatedToCourse && <p>
             <FormattedMessage id={localization.COURSE}
-                              defaultMessage={'Course'}/>: {props.relatedTo}</p>}
+                              defaultMessage={'Course'}/>: {props.relatedToCourse}</p>}
           {props.topic && <p><FormattedMessage id={localization.TOPIC}
                                                defaultMessage={'Topic'}/>: {props.topic}</p>}
           {props.due && <p><FormattedMessage id={localization.DUE_TO}
@@ -33,7 +33,7 @@ const Assignment = props => {
         </div>
       </div>
     );
-}
+};
 
 Assignment.propTypes = {
   title: PropTypes.string.isRequired,
@@ -45,7 +45,7 @@ Assignment.propTypes = {
     }),
     PropTypes.element
   ]),
-  relatedTo: PropTypes.string,
+  relatedToCourse: PropTypes.string,
   topic: PropTypes.string,
   due: PropTypes.string,
   action: PropTypes.any,
