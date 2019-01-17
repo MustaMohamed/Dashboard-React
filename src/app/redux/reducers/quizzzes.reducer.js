@@ -1,4 +1,4 @@
-import { actionsConstants } from "../constants";
+import { actionsConstants } from '../../constants';
 
 const quizzesActionsConstants = actionsConstants.quizzesConstants;
 

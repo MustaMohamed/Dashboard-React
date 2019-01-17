@@ -3,21 +3,21 @@
  */
 
 import React, { Component } from 'react';
-import { Button, Container, Grid, Header, Label, Segment } from "semantic-ui-react";
+import { Button, Container, Grid, Header, Label, Segment } from 'semantic-ui-react';
 
 import '../../content/styles/dashboard.css';
-import { FormattedMessage, intlShape, injectIntl } from "react-intl";
+import { FormattedMessage, intlShape, injectIntl } from 'react-intl';
 
 import { translationConstants as localization } from '../../constants';
-import Assignment from "../generic/Assignment";
-import Announcement from "../generic/Announcement";
+import Assignment from '../generic/Assignment';
+import Announcement from '../generic/Announcement';
 
 
-import { FakeAnnouncementService, FakeQuizzesService } from "../../services";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import { fakeAnnouncementService, fakeQuizzesService } from '../../services';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import { AppActions, AnnouncementsActions, QuizzesActions } from "../../actions";
+import { appActions, announcementsActions, quizzesActions } from '../../redux/actions';
 
 class Dashboard extends Component {
   
@@ -38,38 +38,38 @@ class Dashboard extends Component {
   componentDidMount() {
     this.timeOuts.push (setTimeout (() => {
       
-      this.props.dispatch (AppActions.HideLoading ());
+      this.props.dispatch (appActions.hideLoading ());
       this.setState ({
-        announcements: FakeAnnouncementService.getLatestAnnouncements (),
-        quizzes: FakeQuizzesService.getLatestQuizzes ()
+        announcements: fakeAnnouncementService.getLatestAnnouncements (),
+        quizzes: fakeQuizzesService.getLatestQuizzes ()
       });
     }, 1000));
     
     
     // call fake API services the result announcement array is empty
-    this.props.dispatch (AnnouncementsActions.getLatestAnnouncements ());
+    this.props.dispatch (announcementsActions.getLatestAnnouncements ());
     
     // call fake API services the result quizzes array is empty
-    this.props.dispatch (QuizzesActions.getLatestQuizzes ());
+    this.props.dispatch (quizzesActions.getLatestQuizzes ());
   }
   
   getAllAnnouncements = () => {
     this.timeOuts.push (setTimeout (() => {
-      this.props.dispatch (AppActions.HideLoading ());
+      this.props.dispatch (appActions.hideLoading ());
       this.setState ({
-        announcements: FakeAnnouncementService.getAllAnnouncements (),
+        announcements: fakeAnnouncementService.getAllAnnouncements (),
       });
     }, 1000));
-    this.props.dispatch (AppActions.ShowLoading ());
+    this.props.dispatch (appActions.showLoading ());
   };
   getAllQuizzes = () => {
     this.timeOuts.push (setTimeout (() => {
-      this.props.dispatch (AppActions.HideLoading ());
+      this.props.dispatch (appActions.hideLoading ());
       this.setState ({
-        quizzes: FakeQuizzesService.getAllQuizzes ()
+        quizzes: fakeQuizzesService.getAllQuizzes ()
       });
     }, 1000));
-    this.props.dispatch (AppActions.ShowLoading ());
+    this.props.dispatch (appActions.showLoading ());
   };
   
   // todo: add background image

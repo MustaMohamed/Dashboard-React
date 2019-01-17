@@ -3,9 +3,9 @@
  */
 
 import React from 'react';
-import RequireAuth from "./components/HOC/RequireAuth";
+import RequireAuth from './components/HOC/requireAuth';
 
-const AppStarter = props => {
+const AppStarter = () => {
   return <RequireAuth/>
 };
 

@@ -1,12 +1,12 @@
-import { actionsConstants } from "../constants";
+import { actionsConstants } from '../../constants';
 
 export default {
-  ShowLoading: () => {
+  showLoading: () => {
     return (dispatch) => {
       dispatch ({ type: actionsConstants.appConstants.SHOW_LOADING });
     };
   },
-  HideLoading: () => {
+  hideLoading: () => {
     return (dispatch) => {
       dispatch ({ type: actionsConstants.appConstants.HIDE_LOADING });
     };

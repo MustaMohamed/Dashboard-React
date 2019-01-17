@@ -19,12 +19,11 @@
 .quote-text {
     color: #afa4a5;
 }
+
 .dashboard-hero-text footer.quote-text,
 .dashboard-hero-text q.quote-text {
     font-style: italic;
 }
-
-
 
 .dashboard-hero-text footer {
     display: inline-block;
@@ -35,8 +34,8 @@
     content: '- ';
 }
 
-.ui.top.attached.label:first-child+:not(.attached) {
-    margin-top: 0!important;
+.ui.top.attached.label:first-child + :not(.attached) {
+    margin-top: 0 !important;
 }
 
 .assignment-container {
@@ -44,7 +43,7 @@
 }
 
 .assignment-container button {
-    text-transform: capitalize!important;
+    text-transform: capitalize !important;
 }
 
 .assignment-container:not(:last-child) {
@@ -52,7 +51,7 @@
     border-bottom: 1px solid teal;
 }
 
-.user-profile  {
+.user-profile {
     border-right: 1px solid #afa4a5;
 }
 

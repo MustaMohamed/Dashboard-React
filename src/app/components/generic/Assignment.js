@@ -4,8 +4,8 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Header, Icon } from "semantic-ui-react";
-import { FormattedMessage } from "react-intl";
+import { Header, Icon } from 'semantic-ui-react';
+import { FormattedMessage } from 'react-intl';
 
 import { translationConstants as localization } from '../../constants/index';
 

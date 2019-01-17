@@ -4,7 +4,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon, Label } from "semantic-ui-react";
+import { Icon, Label } from 'semantic-ui-react';
 
 const NotifyIcon = props => {
   return (

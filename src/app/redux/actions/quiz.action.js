@@ -1,29 +1,29 @@
-import { AppActions } from "./";
+import { appActions } from '.';
 
-import { actionsConstants } from "../constants";
+import { actionsConstants } from '../../constants';
 
 
-import { QuizService } from '../services';
+import { quizzesService } from '../../services';
 
 export default {
   getAllQuizzes: () => dispatch => {
-    QuizService.getAllQuizzes ().then (response => {
-        dispatch (AppActions.HideLoading ());
+    quizzesService.getAllQuizzes ().then (response => {
+        dispatch (appActions.hideLoading ());
         dispatch (() => ({
           type: actionsConstants.quizzesConstants.GET_ALL_QUIZZES,
           allQuizzes: response.announcements
         }));
       })
-      .catch (err => console.log (err));
+      .catch ();
   },
   getLatestQuizzes: () => dispatch => {
-    QuizService.getAllQuizzes ().then (response => {
-        dispatch (AppActions.HideLoading ());
+    quizzesService.getAllQuizzes ().then (response => {
+        dispatch (appActions.hideLoading ());
         dispatch (() => ({
           type: actionsConstants.quizzesConstants.GET_LATEST_QUIZZES,
           latestQuizzes: response.announcements
         }));
       })
-      .catch (err => console.log (err));
+      .catch ();
   }
 };

@@ -3,10 +3,10 @@
  */
 
 import React from 'react';
-import Layout from "../layout/Layout";
-import Dashboard from "./Dashboard";
+import Layout from '../layout/Layout';
+import Dashboard from './Dashboard';
 
-const Home = props => {
+const Home = () => {
   return (
     <Layout>
       <Dashboard/>

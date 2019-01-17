@@ -7,11 +7,11 @@ import PropTypes from 'prop-types';
 
 
 // semantic ui components
-import { Container, Header, Icon, Image, Input, Menu, Responsive } from "semantic-ui-react";
-import { FormattedMessage } from "react-intl";
+import { Container, Header, Icon, Image, Input, Menu, Responsive } from 'semantic-ui-react';
+import { FormattedMessage } from 'react-intl';
 
 import { translationConstants as localization } from '../../constants/index';
-import NotifyIcon from "../generic/NotifyIcon";
+import NotifyIcon from '../generic/NotifyIcon';
 
 
 import userImage from '../../content/images/user-image.jpg';

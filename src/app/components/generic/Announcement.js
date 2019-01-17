@@ -4,8 +4,8 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid } from "semantic-ui-react";
-import UserProfile from "./UserProfile";
+import { Grid } from 'semantic-ui-react';
+import UserProfile from './UserProfile';
 
 const Announcement = props => {
   return (

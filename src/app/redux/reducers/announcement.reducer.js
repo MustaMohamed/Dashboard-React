@@ -1,4 +1,4 @@
-import { actionsConstants } from "../constants";
+import { actionsConstants } from '../../constants';
 
 const announcementActionsConstants = actionsConstants.announcementsConstants;
 
@@ -21,4 +21,4 @@ export const announcements = (state = initialState, action) => {
     default:
       return state;
   }
-}
+};

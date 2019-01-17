@@ -1,12 +1,12 @@
-import { actionsConstants } from "../constants";
+import { actionsConstants } from '../../constants';
 
 export default  {
-  UserLogin: () => {
+  userLogin: () => {
     return (dispatch) => {
       dispatch ({ type: actionsConstants.userConstants.USER_LOGIN_SUCCESS});
     };
   },
-  UserLogout: () => {
+  userLogout: () => {
     return (dispatch) => {
       dispatch ({ type: actionsConstants.userConstants.USER_LOGOUT});
     };

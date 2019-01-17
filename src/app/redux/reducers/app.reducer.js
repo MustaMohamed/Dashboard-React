@@ -1,4 +1,4 @@
-import { actionsConstants } from "../constants";
+import { actionsConstants } from '../../constants';
 
 const initialState = {
   showLoading: true
@@ -23,4 +23,4 @@ export const app = (state = initialState, action) => {
     default:
       return state;
   }
-}
+};

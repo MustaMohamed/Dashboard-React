@@ -4,7 +4,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Header, Image } from "semantic-ui-react";
+import { Header, Image } from 'semantic-ui-react';
 
 
 import userImage from '../../content/images/user-image.jpg';

@@ -1,11 +1,11 @@
-import QuizService from './quizzes.service';
-import FakeAnnouncementService from './fakeAnnouncement.service';
-import FakeQuizzesService from './fakeQuizzes.service';
-import AnnouncementService from './announcement.service';
+import quizzesService from './quizzes.service';
+import fakeAnnouncementService from './fakeAnnouncementsService';
+import fakeQuizzesService from './fakeQuizzesService';
+import announcementsService from './announcementsService';
 
 export  {
-  QuizService,
-  FakeQuizzesService,
-  AnnouncementService,
-  FakeAnnouncementService
+  quizzesService,
+  fakeQuizzesService,
+  announcementsService,
+  fakeAnnouncementService
 }

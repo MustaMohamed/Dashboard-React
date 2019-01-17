@@ -3,9 +3,9 @@
  */
 
 import React, { Component } from 'react';
-import { UserActions } from "../../actions";
-import { connect } from "react-redux";
-import { Button, Container } from "semantic-ui-react";
+import { userActions } from '../../redux/actions';
+import { connect } from 'react-redux';
+import { Button, Container } from 'semantic-ui-react';
 
 class Login extends Component {
   
@@ -18,7 +18,7 @@ class Login extends Component {
   }
   
   login = () => {
-    this.props.dispatch (UserActions.UserLogin ());
+    this.props.dispatch (userActions.userLogin ());
   };
   
   render() {

@@ -1,28 +1,28 @@
-import { AppActions } from "./";
-import { actionsConstants } from "../constants";
+import { appActions } from '.';
+import { actionsConstants } from '../../constants';
 
 
-import { AnnouncementService } from '../services';
+import { announcementsService } from '../../services';
 
 export default {
   getAllAnnouncements: () => dispatch => {
-    AnnouncementService.getAllAnnouncements ().then (response => {
-        dispatch (AppActions.HideLoading ());
+    announcementsService.getAllAnnouncements ().then (response => {
+        dispatch (appActions.hideLoading ());
         dispatch (() => ({
           type: actionsConstants.announcementsConstants.GET_ALL_ANNOUNCEMENTS,
           allAnnouncements: response.announcements
         }));
       })
-      .catch (err => console.log (err));
+      .catch ();
   },
   getLatestAnnouncements: () => dispatch => {
-    AnnouncementService.getAllAnnouncements ().then (response => {
-        dispatch (AppActions.HideLoading ());
+    announcementsService.getAllAnnouncements ().then (response => {
+        dispatch (appActions.hideLoading ());
         dispatch (() => ({
           type: actionsConstants.announcementsConstants.GET_LATEST_ANNOUNCEMENTS,
           latestAnnouncements: response.announcements
         }));
       })
-      .catch (err => console.log (err));
+      .catch ();
   }
 };

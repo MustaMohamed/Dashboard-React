@@ -1,5 +1,5 @@
 
-const FakeQuizzesService = {
+const fakeQuizzesService = {
   
   getAllQuizzes: () => {
     
@@ -50,4 +50,4 @@ const FakeQuizzesService = {
   
 };
 
-export default FakeQuizzesService;
+export default fakeQuizzesService;

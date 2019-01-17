@@ -1,4 +1,4 @@
-const FakeAnnouncementService = {
+const fakeAnnouncementsService = {
   
   getAllAnnouncements: () => {
     
@@ -39,4 +39,4 @@ const FakeAnnouncementService = {
   
 };
 
-export default FakeAnnouncementService;
+export default fakeAnnouncementsService;

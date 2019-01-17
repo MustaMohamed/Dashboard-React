@@ -11,7 +11,6 @@ export default {
         .catch ((error) => {
           reject (error);
         });
-      
     });
   },
   get(endpoint) {
@@ -24,15 +23,16 @@ export default {
           reject (error);
         });
     });
-    
-    
   },
-  all(ajaxCalls, callback) {
-    axios.all (ajaxCalls)
-      .then (axios.spread ((acct, perms) => {
-        // Both requests are now complete
-        callback (acct, perms);
-      }));
+  all(ajaxCalls) {
+    return new Promise ((resolve, reject) => {
+      axios.all (ajaxCalls)
+        .then (axios.spread ((acct, perms) => {
+          // Both requests are now complete
+          resolve (acct, perms);
+        })).catch ((error) => {
+        reject (error);
+      })
+    });
   }
 };
-

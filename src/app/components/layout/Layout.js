@@ -5,13 +5,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import AppSidebar from "./AppSidebar";
-import TopHeader from "./TopHeader";
+import AppSidebar from './AppSidebar';
+import TopHeader from './TopHeader';
 
 // component css styles
 import '../../content/styles/layout.css';
-import { Loader, Modal } from "semantic-ui-react";
-import { connect } from "react-redux";
+import { Loader, Modal } from 'semantic-ui-react';
+import { connect } from 'react-redux';
 
 
 class Layout extends Component {

@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import { Menu, Icon, Sidebar, Header } from 'semantic-ui-react';
 
 // intl localization
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage } from 'react-intl';
 
 // translation constants keys
 import { translationConstants as localization } from '../../constants';
